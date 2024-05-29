@@ -1,4 +1,4 @@
-#import "fa.typ": fa, envelope, github, link-icon
+#import "@preview/fontawesome:0.2.0": *
 
 #let sepline() = {
   v(-10pt);
@@ -6,8 +6,8 @@
   v(-2pt)
 }
 
-#let iconlink(uri, text: "", icon: link-icon) = {
-  link(uri)[#fa[#icon] #text]
+#let iconlink(uri, text: "", icon: fa-link()) = {
+  link(uri)[#icon #text]
 }
 
 #let entry(
@@ -17,6 +17,7 @@
   br: "",
   content
 ) = {
+  set list(indent: 10pt)
   block(
     inset: (left: 0pt),
     strong(tl) + h(1fr) + tr +
@@ -31,27 +32,36 @@
 #let resume(body) = {
   set par(justify: true)
 
+
+  let sc(content) = { 
+    show regex("[A-Z]+"): it => text(font: "Charter", it)
+    show regex("[a-z]+"): it => text(font: "Charter", size: 0.80em, upper(it))
+    content
+  }
+
+
   show heading.where(
     level: 1
   ): it => [
     #set align(center)
-    #set text(size: 22pt, font: ("Charter"))
-    #block(it)
+    #set text(size: 22pt, font: ("Charter"), weight: "regular")
+    #block(sc(it))
   ]
 
   show heading.where(
     level: 2
   ): it => [
     #set align(left)
-    #set text(size: 12pt, font: ("Charter"), weight: "bold")
-    #block(it + sepline())
+    #set text(size: 12pt, font: ("Charter"), weight: "regular")
+    #block(sc(it) + sepline())
   ]
   
   set text(font: "Charter")
 
   show link: it => underline(offset: 2pt, it)
   set page(
-   margin: (x: 0.9cm, y: 1.3cm),
+    height: auto,
+    margin: (x: 0.9cm, y: 1.3cm),
   )
   set par(justify: true)
 
