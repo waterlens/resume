@@ -11,11 +11,11 @@
 ]
 
 == Research Interests
-I am interested in the implementation and optimization of functional programming languages, particularly in the following areas:
+I am interested in the implementation and optimization of programming languages, particularly in the following areas:
 - Automatic memory management assisted by type systems
 - Improved data representation for compute-intensive programs
-- Explicit vectorization in functional programming languages
-- Formal verification of implementations and optimizations
+- Explicit vectorization
+- Formal verification of transformations
 
 == Education
 #entry(
