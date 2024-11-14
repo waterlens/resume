@@ -11,11 +11,7 @@
 ]
 
 == Research Interests
-I am interested in the implementation and optimization of programming languages, particularly in the following areas:
-- Automatic memory management assisted by type systems
-- Improved data representation for compute-intensive programs
-- Explicit vectorization
-- Formal verification of transformations
+I am broadly interested in the implementation and optimization of programming languages.
 
 == Education
 #entry(
@@ -44,8 +40,8 @@ I am interested in the implementation and optimization of programming languages,
     tr: [*Autumn 2023 - Now*],
 )[
 
-- This is an ongoing project in HKUST TACO Lab. It's an object-oriented and functional programming language with numerous advanced type system features.
-- Designed an ANF-based IR with join points support and integrated it into MLS compiler.
+- This is an ongoing project in HKUST TACO Lab.
+- Designed an ANF-based IR with join points support and integrated it into MLsript compiler.
 - Implemented an optimizer based on it. It contains a non-duplicate partial inliner leveraging function splitting.
 - Implemented a C++ backend. Using a universal object representation, and reference counting for memory management.
 ]
@@ -55,9 +51,9 @@ I am interested in the implementation and optimization of programming languages,
     tr: [*Spring 2022*],
 )[
 
-- This is a coursework for the course _compilation principle_.
+- A coursework for the course _Compilation Principle_.
 - Designed and implemented a programming language with functional features like algebraic data type, closure, and pattern matching.
-- Topics include: type checking, closure conversion, LLVM-based code generation, and runtime system.
+- Topics include: type checking, closure conversion, LLVM-based code generation
 ]
 
 #entry(
@@ -66,44 +62,48 @@ I am interested in the implementation and optimization of programming languages,
 )[
 
 - This is an optimizing compiler for SysY (a subset of C) language.
-- Typical dataflow analysis: immediate dominator analysis, iterated domination frontier analysis for SSA IR construction.
-- Optimizations: constant propagation, CFG simplification, and dead code elimination.
-- Implemented linear scan register allocation.
+- Typical dataflow analysis: immediate dominator analysis, iterated domination frontier analysis for SSA construction.
+- Optimizations like constant propagation, CFG simplification, and dead code elimination.
+]
+
+#entry(
+    tl: [MMM],
+    tr: [*Autumn 2024 - Now*]
+)[
+- A small compiler for the functional MiniMoonBit language.
+- Do selective CPS transformation and thunking on function calls to avoid stack overflow in the JavaScript backend.
+- Implemented an efficient native backend with tree-pattern covering instruction selector and chordal graph coloring register allocator.
+- Optimizations like lambda lifting, loop invariant code motion, local value numbering, and guaranteed tail recursion elimination.
 ]
 
 == Experience
 
 #entry(
-    tl: [*Teaching Assistant* of _Principles of Programming Languages_],
+    tl: [*Undergraduate Teaching Assistant*, _Principles of Programming Languages_],
     tr: [*Sept. 2022 - Jan. 2023*],
-)[
-
-- Prepared a lab that requires students to implement Hindley-Milner type inference with let generalization in a simple typed lambda calculus.
-- Designed and wrote the auto judgement system of labs.
-]
+)[]
 
 #entry(
-    tl: [*Keynote Presentation* in a PL enthusiasts group],
-    tr: [*July 2023*],
-)[
-
-- Gave a presentation on the topic of "Efficient Pattern Matching Compilation".
-]
+    tl: [*Remote Research Intern*, _hosted by Yizhou Zhang_],
+    tr: [*Sept. 2022 - Jan. 2023*],
+)[]
 
 #entry(
-    tl: [*Teaching Assistant* of _Programming with C++_],
+    tl: [*Teaching Assistant*, _Programming with C++_],
     tr: [*Jan. 2024 - June 2024*],
-)[
+)[]
 
-- Prepared a lab that helps students learn dynamic memory management in C++.
-]
+#entry(
+    tl: [*Student Volunteer*, _ICFP 2024_],
+    tr: [*Sept. 2024*],
+)[]
 
 == Skills
 
 *Programming Languages:*
-OCaml, Rust, Haskell, C/C++, Zig, Scala, Java, Python, etc.
+OCaml, Rust, C/C++, Scala, Java, Python, etc.
 #v(-6pt)
 *Proof Assistant:*
 Coq
 
-#align(right + bottom, text(fill: gray)[Last Updated on May 24, 2024])
+#align(right + bottom, text(fill: gray)[Last Updated on Nov. 2024])
