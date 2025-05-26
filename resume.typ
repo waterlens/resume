@@ -11,12 +11,12 @@
 ]
 
 == Research Interests
-I am broadly interested in the implementation and optimization of programming languages.
+I aim to improve programming languages to enhance performance and provide stronger guarantees for users.
 
 == Education
 #entry(
     tl: [Hong Kong University of Science & Technology],
-    tr: [*Aug. 2023 - June 2025 (expected)*],
+    tr: [*Aug. 2023 - Aug. 2025 (expected)*],
     bl: [*M. Phil.* in _Computer Science and Engineering_],
     br: [_Hong Kong S.A.R., China_],
 )[
@@ -53,7 +53,7 @@ I am broadly interested in the implementation and optimization of programming la
 
 - A coursework for the course _Compilation Principle_.
 - Designed and implemented a programming language with functional features like algebraic data type, closure, and pattern matching.
-- Topics include: type checking, closure conversion, LLVM-based code generation
+- Topics include type checking, closure conversion, LLVM-based code generation
 ]
 
 #entry(
