@@ -11,26 +11,23 @@
 ]
 
 == Research Interests
-I aim to improve programming languages to enhance performance and provide stronger guarantees for users.
+By studying how compiler technology can shape the features of programming languages, I aim to contribute to the development of new programming languages that offer strong static guarantees, intuitive error handling, and seamless cross-platform portability.
 
 == Education
 #entry(
     tl: [Hong Kong University of Science & Technology],
-    tr: [*Aug. 2023 - Aug. 2025 (expected)*],
-    bl: [*M. Phil.* in _Computer Science and Engineering_],
+    tr: [*Sept. 2023 - Aug. 2025 (expected)*],
+    bl: [*M. Phil.* in _Computer Science and Engineering_. Supervised by Lionel Parreaux.],
     br: [_Hong Kong S.A.R., China_],
 )[
-- Advisor: Lionel Parreaux
 ]
 
 #entry(
     tl: [Zhejiang University],
-    tr: [*Sep. 2019 - June 2023*],
-    bl: [*B. Eng.* in _Computer Science and Technology_],
+    tr: [*Sept. 2019 - June 2023*],
+    bl: [*B. Eng.* in _Computer Science and Technology_. GPA: 3.84/4.0],
     br: [_Hangzhou, China_],
 )[
-- GPA: 3.84/4.0
-- A/A+ Courses: Programming Language Principles, Compilation Principles, Data Structure and Algorithm, etc.
 ]
 
 == Projects
@@ -42,7 +39,7 @@ I aim to improve programming languages to enhance performance and provide strong
 
 - This is an ongoing project in HKUST TACO Lab.
 - Designed an ANF-based IR with join points support and integrated it into MLsript compiler.
-- Implemented an optimizer based on it. It contains a non-duplicate partial inliner leveraging function splitting.
+- Implemented a code rewriter that contains a non-duplicate partial inliner leveraging function splitting.
 - Implemented a C++ backend. Using a universal object representation, and reference counting for memory management.
 ]
 
@@ -61,9 +58,9 @@ I aim to improve programming languages to enhance performance and provide strong
     tr: [*Spring 2022 - Summer 2022*],
 )[
 
-- This is an optimizing compiler for SysY (a subset of C) language.
+- This is a compiler for SysY (a subset of C) language.
 - Typical dataflow analysis: immediate dominator analysis, iterated domination frontier analysis for SSA construction.
-- Optimizations like constant propagation, CFG simplification, and dead code elimination.
+- Constant propagation, CFG simplification, and dead code elimination.
 ]
 
 #entry(
@@ -73,19 +70,27 @@ I aim to improve programming languages to enhance performance and provide strong
 - A small compiler for the functional MiniMoonBit language.
 - Do selective CPS transformation and thunking on function calls to avoid stack overflow in the JavaScript backend.
 - Implemented an efficient native backend with tree-pattern covering instruction selector and chordal graph coloring register allocator.
-- Optimizations like lambda lifting, loop invariant code motion, local value numbering, and guaranteed tail recursion elimination.
+- Lambda lifting, loop invariant code motion, local value numbering, and guaranteed tail recursion elimination.
 ]
+
+== Publications
+
+#entry(
+    tl: [*Smart Inlining through Function Splitting*, _PLDI SRC 2025_],
+    tr: [*April 2025*],
+)[]
 
 == Experience
 
 #entry(
-    tl: [*Undergraduate Teaching Assistant*, _Principles of Programming Languages_],
-    tr: [*Sept. 2022 - Jan. 2023*],
+    tl: [*Intern for Programming Language Tool Development*, _at IDEA_],
+    tr: [*Mar. 2025 - June 2025 (expected)*],
+
 )[]
 
 #entry(
-    tl: [*Remote Research Intern*, _hosted by Yizhou Zhang_],
-    tr: [*Sept. 2022 - Jan. 2023*],
+    tl: [*Student Volunteer*, _ICFP 2024_],
+    tr: [*Sept. 2024*],
 )[]
 
 #entry(
@@ -94,8 +99,13 @@ I aim to improve programming languages to enhance performance and provide strong
 )[]
 
 #entry(
-    tl: [*Student Volunteer*, _ICFP 2024_],
-    tr: [*Sept. 2024*],
+    tl: [*Remote Research Intern*, _hosted by Yizhou Zhang_],
+    tr: [*Sept. 2022 - Jan. 2023*],
+)[]
+
+#entry(
+    tl: [*Undergraduate Teaching Assistant*, _Principles of Programming Languages_],
+    tr: [*Sept. 2022 - Jan. 2023*],
 )[]
 
 == Skills
@@ -106,4 +116,4 @@ OCaml, Rust, C/C++, Scala, Java, Python, etc.
 *Proof Assistant:*
 Coq
 
-#align(right + bottom, text(fill: gray)[Last Updated on Nov. 2024])
+#align(right + bottom, text(fill: gray)[Last Updated on April 2025])
