@@ -205,6 +205,7 @@ Designing and implementing *optimizations* in compilers for programming language
 *Compilers:*
 - Experienced in using and modifying common compiler frameworks, such as LLVM, Cranelift, etc.
 - Familiar with the compilation of all kinds of programming languages (e.g imperative, functional, object-oriented, dynamic, etc.)
+- Knowledgeable of multiple register allocation algorithms.
 
 *Languages:*
 - Chinese (native), English (good working communication)
