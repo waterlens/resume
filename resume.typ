@@ -204,8 +204,13 @@ Designing and implementing *optimizations* in compilers for programming language
 
 *Compilers:*
 - Experienced in using and modifying common compiler frameworks, such as LLVM, Cranelift, etc.
-- Familiar with the compilation of all kinds of programming languages (e.g imperative, functional, object-oriented, dynamic, etc.)
-- Knowledgeable of multiple register allocation algorithms.
+- Familiar with the compilation of various paradigms of programming languages,
+  including imperative, functional, object-oriented, and dynamic languages.
+- Skilled in manually tuning micro-architecture-level performance using *profiling* tools such as `perf`, `VTune`, and `flamegraph`.
+- Understanding of multiple *register allocation* algorithms (iterated register coalescing, linear scan, etc.),
+  *garbage collection* algorithms (mark-sweep, mark-compact, tri-color incremental, generational, etc.).
+- Extensive knowledge of runtime system design and implementation, including memory management,
+  runtime objects representation, *context switching*, etc.
 
 *Languages:*
 - Chinese (native), English (good working communication)
