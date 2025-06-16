@@ -17,7 +17,7 @@ Designing and implementing *optimizations* in compilers for programming language
 == Education
 #entry(
     tl: [Hong Kong University of Science & Technology],
-    tr: [*Sept. 2023 - Aug. 2025 (expected)*],
+    tr: [*Sept. 2023 - Nov. 2025 (expected)*],
     bl: [*M. Phil.* in _Computer Science and Engineering_. Supervised by Lionel Parreaux.],
     br: [_Hong Kong S.A.R., China_],
 )[
