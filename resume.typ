@@ -64,6 +64,19 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
+    tl: [*QuicKaml* #link("https://github.com/waterlens/quickaml")[#fa-link()] _C_],
+    tr: [*Autumn 2023*],
+)[
+- A hobby project that implements a *register-based VM* interpreter of a monomorphic language and engineered many low-level optimizations.
+- I patched LLVM with special *calling conventions* to generate
+  efficient code for the handler of VM instructions in interpreter using *guaranteed tail-calls*.
+- I tried multiple techniques to improve the performance of the interpreter, including:
+  *operands reordering* to allow more efficient sign-extension; *partial register decoding* to reduce
+  unnecessary shifts on x86-64 architecture; instruction fetching based on unaligned memory access
+  or shifting & masking; *pre-decoding* before dispatching to exploit the CPU pipelines.
+]
+
+#entry(
     tl: [*MLscript* #link("https://github.com/waterlens/mlscript")[#fa-link()] _Scala, C++_],
     tr: [*Autumn 2023 - Now*],
 )[
@@ -209,8 +222,8 @@ Designing and implementing *optimizations* in compilers for programming language
 - Skilled in manually tuning micro-architecture-level performance using *profiling* tools such as `perf`, `VTune`, and `flamegraph`.
 - Understanding of multiple *register allocation* algorithms (iterated register coalescing, linear scan, etc.),
   *garbage collection* algorithms (mark-sweep, mark-compact, tri-color incremental, generational, etc.).
-- Extensive knowledge of runtime system design and implementation, including memory management,
-  runtime objects representation, *context switching*, etc.
+- Extensive knowledge of interpreter and runtime system design and implementation, including various threading techniques,
+  stack-based VM and register-based VM, memory management, runtime objects representation, *context switching*, etc.
 
 *Languages:*
 - Chinese (native), English (good working communication)
