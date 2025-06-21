@@ -1,4 +1,4 @@
-#import "@preview/fontawesome:0.2.0": *
+#import "@preview/fontawesome:0.5.0": *
 
 #let sepline() = {
   v(-10pt);
