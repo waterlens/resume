@@ -123,7 +123,7 @@
 == 学术成果
 
 #entry(
-    tl: [*通过函数分割实现智能内联*，_PLDI SRC 2025_],
+    tl: [*Smart Inlining through Function Splitting*，_PLDI SRC 2025_],
     tr: [*2025年4月*],
 )[]
 
@@ -177,6 +177,11 @@
 
 *编程语言理论：*
 - 使用Coq进行形式化验证。
+- 阅读过编程语言理论书籍，包括：
+  *Software Foundations*;
+  *Types and Programming Languages*;
+  *Practical Foundations for Programming Languages*;
+  *Essentials of Programming Languages*.
 - 熟悉基于约束的类型推断、双向类型推断等，具备丰富的类型系统知识。
 
 *编译器：*

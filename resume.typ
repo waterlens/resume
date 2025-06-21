@@ -213,6 +213,11 @@ Designing and implementing *optimizations* in compilers for programming language
 
 *Programming Language Theory:*
 - Formal verification with Coq.
+- Read books on programming languages, including:
+  *Software Foundations*;
+  *Types and Programming Languages*;
+  *Practical Foundations for Programming Languages*;
+  *Essentials of Programming Languages*.
 - Constraint-based type inference, bidirectional type inference, etc. Rich knowledge on type system.
 
 *Compilers:*
