@@ -1,4 +1,4 @@
-#import "template-cn.typ": *
+#import "template.typ": *
 
 #show: resume
 

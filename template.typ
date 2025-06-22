@@ -1,4 +1,5 @@
 #import "@preview/fontawesome:0.5.0": *
+#import "@preview/based:0.2.0": base64
 
 #let sepline() = {
   v(-10pt);
@@ -29,22 +30,22 @@
   )
 }
 
-#let resume(body) = {
+#let resume(body, cn: false) = {
   set par(justify: true)
 
+  let font = if cn { "PingFang SC" } else { "Charter" }
 
   let sc(content) = { 
-    show regex("[A-Z]+"): it => text(font: "Charter", it)
-    show regex("[a-z]+"): it => text(font: "Charter", size: 0.80em, upper(it))
+    show regex("[A-Z]+"): it => text(font: font, it)
+    show regex("[a-z]+"): it => text(font: font, size: 0.80em, upper(it))
     content
   }
-
 
   show heading.where(
     level: 1
   ): it => [
     #set align(center)
-    #set text(size: 22pt, font: ("Charter"), weight: "regular")
+    #set text(size: 22pt, font: font, weight: "regular")
     #block(sc(it))
   ]
 
@@ -52,11 +53,11 @@
     level: 2
   ): it => [
     #set align(left)
-    #set text(size: 12pt, font: ("Charter"), weight: "regular")
+    #set text(size: 12pt, font: font, weight: "regular")
     #block(sc(it) + sepline())
   ]
   
-  set text(font: "Charter")
+  set text(font: font)
 
   show link: it => underline(offset: 2pt, it)
   set page(
@@ -64,6 +65,16 @@
     margin: (x: 0.9cm, y: 1.3cm),
   )
   set par(justify: true)
+
+  let ts = datetime.today(offset:8).display()
+  let embedded = bytes(base64.encode(ts))
+  
+  pdf.embed(
+    "info.txt",
+    embedded,
+    mime-type: "text/plain",
+    relationship: "data",
+  )
 
   body
 }

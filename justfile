@@ -1,8 +1,8 @@
 build-cn:
-  typst compile --creation-timestamp 0 --font-path ./fonts/ resume-cn.typ resume-cn.pdf
+  typst compile --pdf-standard a-3b --font-path ./fonts/ resume-cn.typ resume-cn.pdf
 
 build-en:
-  typst compile --creation-timestamp 0 --font-path ./fonts/ resume.typ resume.pdf
+  typst compile --pdf-standard a-3b --font-path ./fonts/ resume.typ resume.pdf
 
 build: build-cn build-en
 
