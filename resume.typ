@@ -1,7 +1,6 @@
 #import "template.typ": *
 
-#show: resume
-
+#show: it => resume(it, lang: "en")
 
 = Ruqing Yang
 

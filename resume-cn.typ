@@ -1,6 +1,6 @@
 #import "template.typ": *
 
-#show: resume
+#show: it => resume(it, lang: "zh-cn")
 
 = 杨汝清
 

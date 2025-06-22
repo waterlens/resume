@@ -30,10 +30,10 @@
   )
 }
 
-#let resume(body, cn: false) = {
+#let resume(body, lang: "en") = {
   set par(justify: true)
 
-  let font = if cn { "PingFang SC" } else { "Charter" }
+  let font = if lang == "zh-cn" { "PingFang SC" } else { "Charter" }
 
   let sc(content) = { 
     show regex("[A-Z]+"): it => text(font: font, it)
