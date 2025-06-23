@@ -38,7 +38,7 @@ Designing and implementing *optimizations* in compilers for programming language
     tr: [*Spring 2022*],
 )[
 - This is a group project for course _Compilation Principles_.
-- A feature-rich programming language with *algebraic data types*, high order functions, and pattern matching.
+- A feature-rich programming language with *algebraic data types*, higher order functions, and pattern matching.
 - I was involved in designing the *type system*, typed AST, the memory representation of objects,
   the style of name mangling, and a middle IR that provides an intermediary level for desugaring and other necessary transformations.
 - I led the development of this project. I implemented almost all components (except for lexing & parsing),
