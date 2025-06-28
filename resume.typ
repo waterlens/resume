@@ -161,7 +161,7 @@ Designing and implementing *optimizations* in compilers for programming language
 
 #entry(
     tl: [*Intern for Programming Language Tool Development*, _at IDEA_],
-    tr: [*Mar. 2025 - Sept. 2025 (expected)*],
+    tr: [*Mar. 2025 - June. 2025*],
 )[
   - I implemented an OCaml optimization that improves the performance of the MoonBit compiler.
   - I improved the speed of compiling the MoonBit test when using the native backend
