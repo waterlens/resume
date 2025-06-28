@@ -1,5 +1,7 @@
 #import "template.typ": *
 
+#let for-normal-dev = true
+
 #show: it => resume(it, lang: "en")
 
 = Ruqing Yang
@@ -9,9 +11,17 @@
 #iconlink("https://github.com/waterlens", text: "github.com/waterlens", icon: fa-github())
 ]
 
+#if for-normal-dev [
+== Personal Overview
+
+I have researched compilers and compilation optimizations, with rich experience in system development and performance optimization, aiming to dedicate myself to high-performance software development.
+
+] else [
 == Interests
 I aim to improve *programming languages* to enhance *performance* and provide stronger guarantees for users.
 Designing and implementing *optimizations* in compilers for programming languages has been my lifelong pursuit.
+
+]
 
 == Education
 #entry(
@@ -34,8 +44,8 @@ Designing and implementing *optimizations* in compilers for programming language
 == Projects
 
 #entry(
-    tl: [*Calocom* #link("https://github.com/permui/calocom")[#fa-link()] _Rust_],
-    tr: [*Spring 2022*],
+    tl: [*Calocom* #link("https://github.com/permui/calocom")[#fa-link()] (_Rust_)],
+    tr: [*Apr. 2022 - June 2022*],
 )[
 - This is a group project for course _Compilation Principles_.
 - A feature-rich programming language with *algebraic data types*, higher order functions, and pattern matching.
@@ -48,8 +58,8 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*SyOC* #link("https://github.com/waterlens/syoc")[#fa-link()] _C++, Python, ARM_],
-    tr: [*Spring 2022 - Summer 2022*],
+    tl: [*SyOC* #link("https://github.com/waterlens/syoc")[#fa-link()] (_C++, Python, ARM_)],
+    tr: [*Mar. 2022 - Aug. 2022*],
 )[
 - A hobby project with my friend for learning compiler optimization techniques and participating in Bisheng Cup Compiler Contest. 
   We wrote the project from scratch and were the first team (2 people) from ZJU to enter the final round of the contest.
@@ -63,8 +73,8 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*QuicKaml* #link("https://github.com/waterlens/quickaml")[#fa-link()] _C_],
-    tr: [*Autumn 2023*],
+    tl: [*QuicKaml* #link("https://github.com/waterlens/quickaml")[#fa-link()] (_C_)],
+    tr: [*June 2023 - Jan. 2024*],
 )[
 - A hobby project that implements a *register-based VM* interpreter of a monomorphic language and engineered many low-level optimizations.
 - I patched LLVM with special *calling conventions* to generate
@@ -76,8 +86,8 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*MLscript* #link("https://github.com/waterlens/mlscript")[#fa-link()] _Scala, C++_],
-    tr: [*Autumn 2023 - Now*],
+    tl: [*MLscript* #link("https://github.com/waterlens/mlscript")[#fa-link()] (_Scala, C++_)],
+    tr: [*Apr. 2023 - Now*],
 )[
 - A joint project from my lab.
 - I designed a *ANF*-based intermediate representation with join points extension.
@@ -90,8 +100,8 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*MMM* #link("https://github.com/Mini-Moonbit-Machine/mmm")[#fa-link()] _MoonBit, RISC-V, WebAssembly_],
-    tr: [*Autumn 2024*]
+    tl: [*MMM* #link("https://github.com/Mini-Moonbit-Machine/mmm")[#fa-link()] (_MoonBit, RISC-V, WebAssembly_)],
+    tr: [*Sept. 2024 - Nov. 2024*]
 )[
 - A joint project with my friend for the MGPIC contest. Won 1st place and had an absolute advantage over 2nd place.
 - I led the development and designed an optimizing compiler
@@ -112,8 +122,8 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*RMatch* #link("https://github.com/waterlens/rmatch")[#fa-link()] _C++_],
-    tr: [*Autumn 2021*],
+    tl: [*RMatch* #link("https://github.com/waterlens/rmatch")[#fa-link()] (_C++_)],
+    tr: [*Sept. 2021 - Oct. 2021*],
 )[
 - A personal hobby project that parses *regular expressions* and generates NFA-based *virtual machine* bytecode.
   The bytecode is then *JIT*-compiled to native x86-64 machine instructions with C++ library _xbyak_.
@@ -121,16 +131,16 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*Apple μArch Bench* #link("https://github.com/waterlens/apple-uarch-bench")[#fa-link()] _C_],
-    tr: [*Spring 2024*],
+    tl: [*Apple μArch Bench* #link("https://github.com/waterlens/apple-uarch-bench")[#fa-link()] (_C_)],
+    tr: [*Apr. 2024*],
 )[
 - A hobby project to explore *micro-architecture* characteristics on Apple Silicon with *hardware performance
   counters*.
 ]
 
 #entry(
-    tl: [*SIB Optimization for OCaml* #link("https://github.com/waterlens/ocaml/pull/1")[#fa-link()] _OCaml_],
-    tr: [*Spring 2025*],
+    tl: [*SIB Optimization for OCaml* #link("https://github.com/waterlens/ocaml/pull/1")[#fa-link()] (_OCaml_)],
+    tr: [*May 2025 - June 2025*],
 )[
 - _Share-immutable-block_ optimization.
   Functional programming languages frequently perform pattern matching on existing data structures.
@@ -140,8 +150,8 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*Monoid Hash* #link("https://github.com/waterlens/monoid-hash/blob/fcf87700c1145429097045e3a29cc2db8230ae22/crc32c.h#L76")[#fa-link()] _C, AArch64_],
-    tr: [*Spring 2025*],
+    tl: [*Monoid Hash* #link("https://github.com/waterlens/monoid-hash/blob/fcf87700c1145429097045e3a29cc2db8230ae22/crc32c.h#L76")[#fa-link()] (_C, AArch64_)],
+    tr: [*Apr. 2025*],
 )[
 - The performance critical part of an ongoing research project on incremental computation.
 - I extended the fast-crc32 implementation with hardware-accelerated monoid
@@ -154,14 +164,14 @@ Designing and implementing *optimizations* in compilers for programming language
 
 #entry(
     tl: [*Smart Inlining through Function Splitting*, _PLDI SRC 2025_],
-    tr: [*April 2025*],
+    tr: [*Apr. 2025*],
 )[]
 
 == Experience
 
 #entry(
     tl: [*Intern for Programming Language Tool Development*, _at IDEA_],
-    tr: [*Mar. 2025 - June. 2025*],
+    tr: [*Mar. 2025 - June 2025*],
 )[
   - I implemented an OCaml optimization that improves the performance of the MoonBit compiler.
   - I improved the speed of compiling the MoonBit test when using the native backend
@@ -210,6 +220,7 @@ Designing and implementing *optimizations* in compilers for programming language
 - Familiar: Java, Python
 - Experienced with: TypeScript, JavaScript, Ruby, Haskell, Lua, Verilog, Scheme, etc.
 
+#if not(for-normal-dev) [
 *Programming Language Theory:*
 - Formal verification with Coq.
 - Read books on programming languages, including:
@@ -218,6 +229,7 @@ Designing and implementing *optimizations* in compilers for programming language
   *Practical Foundations for Programming Languages*;
   *Essentials of Programming Languages*.
 - Constraint-based type inference, bidirectional type inference, etc. Rich knowledge on type system.
+]
 
 *Compilers:*
 - Experienced in using and modifying common compiler frameworks, such as LLVM, Cranelift, etc.
@@ -228,6 +240,19 @@ Designing and implementing *optimizations* in compilers for programming language
   *garbage collection* algorithms (mark-sweep, mark-compact, tri-color incremental, generational, etc.).
 - Extensive knowledge of interpreter and runtime system design and implementation, including various threading techniques,
   stack-based VM and register-based VM, memory management, runtime objects representation, *context switching*, etc.
+
+#if for-normal-dev [
+*Architecture:*
+- Designed and implemented a *scoreboard-based out-of-order RISC-V architecture CPU*.
+- Familiar with instruction sets of architectures such as x86-64, AArch64, RISC-V, etc.
+- Proficient in micro-architecture level performance analysis based on documentation provided by CPU manufacturers.
+
+*Operating Systems:*
+- Deep understanding of Linux kernel's *thread and process models*, as well as their *context switching*, *communication* (pipes, message queues, shared memory, semaphores), *synchronization* (mutexes, read-write locks, condition variables) mechanisms.
+- Familiar with *virtual memory* mechanisms, paging principles, and MMU functions.
+- Familiar with Linux *I/O models* (blocking, non-blocking, multiplexing epoll, asynchronous), understanding their principles and applications in high-concurrency scenarios.
+- Mastery of common *process/thread scheduling algorithms* (round-robin, multi-level feedback queue, etc.), understanding their impact on system performance.
+]
 
 *Languages:*
 - Chinese (native), English (good working communication)

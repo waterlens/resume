@@ -45,8 +45,8 @@
 == 项目经历
 
 #entry(
-    tl: [*Calocom* #link("https://github.com/permui/calocom")[#fa-link()] _Rust_],
-    tr: [*2022年春季*],
+    tl: [*Calocom* #link("https://github.com/permui/calocom")[#fa-link()] (_Rust_)],
+    tr: [*2022年4月 - 2022年6月*],
 )[
 - 《编译原理》课程的团队项目。
 - 开发了一种功能丰富的编程语言，支持*代数数据类型*、高阶函数和模式匹配。
@@ -57,8 +57,8 @@
 ]
 
 #entry(
-    tl: [*SyOC* #link("https://github.com/waterlens/syoc")[#fa-link()] _C++, Python, ARM_],
-    tr: [*2022年春季 - 2022年夏季*],
+    tl: [*SyOC* #link("https://github.com/waterlens/syoc")[#fa-link()] (_C++, Python, ARM_)],
+    tr: [*2022年3月 - 2022年8月*],
 )[
 - 与朋友合作的学习项目，旨在学习编译器优化技术并参加毕昇杯编译器大赛。  
   从零开始开发，浙江大学首个进入决赛的团队（仅两人）。
@@ -68,8 +68,8 @@
 ]
 
 #entry(
-    tl: [*MLscript* #link("https://github.com/waterlens/mlscript")[#fa-link()] _Scala, C++_],
-    tr: [*2023年秋季 - 至今*],
+    tl: [*MLscript* #link("https://github.com/waterlens/mlscript")[#fa-link()] (_Scala, C++_)],
+    tr: [*2023年4月 - 至今*],
 )[
 - 实验室联合项目。
 - 设计了基于*ANF*的中间表示，扩展了连接点（join points）。
@@ -78,8 +78,8 @@
 ]
 
 #entry(
-    tl: [*QuicKaml* #link("https://github.com/waterlens/quickaml")[#fa-link()] _C_],
-    tr: [*2023年秋季*],
+    tl: [*QuicKaml* #link("https://github.com/waterlens/quickaml")[#fa-link()] (_C_)],
+    tr: [*2023年6月 - 2024年1月*],
 )[
 - 一个个人兴趣项目，为一单态语言实现了基于寄存器的虚拟机解释器，并进行了许多低级优化。
 - 使用补丁版本的LLVM，为解释器中的VM指令处理生成*保证尾调用*的代码。
@@ -88,8 +88,8 @@
 ]
 
 #entry(
-    tl: [*MMM* #link("https://github.com/Mini-Moonbit-Machine/mmm")[#fa-link()] _MoonBit, RISC-V, WebAssembly_],
-    tr: [*2024年秋季*],
+    tl: [*MMM* #link("https://github.com/Mini-Moonbit-Machine/mmm")[#fa-link()] (_MoonBit, RISC-V, WebAssembly_)],
+    tr: [*2024年9月 - 2024年11月*],
 )[
 - 与朋友合作的MGPIC大赛项目，获得第一名，遥遥领先第二名。
 - 领导开发并设计了基于MoonBit的优化编译器框架，支持_Mini MoonBit_语言，包含JavaScript、*RISC-V*和*WASM*后端。
@@ -99,22 +99,22 @@
 ]
 
 #entry(
-    tl: [*RMatch* #link("https://github.com/waterlens/rmatch")[#fa-link()] _C++_],
-    tr: [*2021年秋季*],
+    tl: [*RMatch* #link("https://github.com/waterlens/rmatch")[#fa-link()] (_C++_)],
+    tr: [*2021年9月 - 2021年10月*],
 )[
 - 个人兴趣项目，解析*正则表达式*并生成基于NFA的*虚拟机*字节码，随后使用C++库_xbyak_将字节码*即时编译*为x86-64本地机器指令。
 ]
 
 #entry(
-    tl: [*Apple μArch Bench* #link("https://github.com/waterlens/apple-uarch-bench")[#fa-link()] _C_],
-    tr: [*2024年春季*],
+    tl: [*Apple μArch Bench* #link("https://github.com/waterlens/apple-uarch-bench")[#fa-link()] (_C_)],
+    tr: [*2024年4月*],
 )[
 - 兴趣项目，探索Apple Silicon的*微架构*特性，使用*硬件性能计数器*进行分析。
 ]
 
 #entry(
-    tl: [*OCaml的SIB优化* #link("https://github.com/waterlens/ocaml/pull/1")[#fa-link()] _OCaml_],
-    tr: [*2025年春季*],
+    tl: [*OCaml的SIB优化* #link("https://github.com/waterlens/ocaml/pull/1")[#fa-link()] (_OCaml_)],
+    tr: [*2025年5月 - 2025年6月*],
 )[
 - *共享不可变块*优化。  
   函数式编程语言常对现有数据结构进行模式匹配，即使新对象与旧对象相同，也常会分配新对象。  
@@ -123,8 +123,8 @@
 ]
 
 #entry(
-    tl: [*单子哈希* #link("https://github.com/waterlens/monoid-hash/blob/fcf87700c1145429097045e3a29cc2db8230ae22/crc32c.h#L76")[#fa-link()] _C, AArch64_],
-    tr: [*2025年春季*],
+    tl: [*单子哈希* #link("https://github.com/waterlens/monoid-hash/blob/fcf87700c1145429097045e3a29cc2db8230ae22/crc32c.h#L76")[#fa-link()] (_C, AArch64_)],
+    tr: [*2025年4月*],
 )[
 - 增量计算研究项目的性能关键部分。
 - 使用ARMv8的`pmull`指令扩展了fast-crc32实现，加速单子组合。  
