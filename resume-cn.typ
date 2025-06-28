@@ -2,6 +2,8 @@
 
 #show: it => resume(it, lang: "zh-cn")
 
+#let for-normal-dev = true
+
 = 杨汝清
 
 #align(center)[
@@ -9,16 +11,25 @@
 #iconlink("https://github.com/waterlens", text: "github.com/waterlens", icon: fa-github())
 ]
 
+#if for-normal-dev [
+== 个人概述
+
+研究过编译器和编译优化，在系统开发与性能优化方面拥有丰富经验，想要致力于高性能软件开发。
+
+] else [
 == 研究兴趣
+
 致力于改进*编程语言*，提升*性能*并为用户提供更强的保障。  
 设计和实现编程语言，对编译器进行*优化*是我毕生的追求。
+
+]
 
 == 教育背景
 #entry(
     tl: [香港科技大学],
     tr: [*2023年9月 - 2025年11月（预计）*],
     bl: [*哲学硕士 (MPhil)*，_计算机科学与工程_，导师：Lionel Parreaux],
-    br: [_中国香港特别行政区_],
+    br: [_香港特别行政区_],
 )[
   研究方向：函数式编程语言的*优化*。
 ]
@@ -27,7 +38,7 @@
     tl: [浙江大学],
     tr: [*2019年9月 - 2023年6月*],
     bl: [*工学学士 (BEng)*，_计算机科学与技术_，GPA：3.84/4.0],
-    br: [_中国杭州_],
+    br: [_杭州_],
 )[
 ]
 
@@ -170,11 +181,12 @@
 
 == 技能
 
-*编程语言：* 精通多种编程语言，包括但不限于：
+*编程语言：* 通晓多种编程语言，包括但不限于：
 - 最常用：OCaml、Rust、C/C++、Scala
 - 熟悉：Java、Python
 - 有使用经验：TypeScript、JavaScript、Ruby、Haskell、Lua、Verilog、Scheme等
 
+#if not(for-normal-dev) [
 *编程语言理论：*
 - 使用Coq进行形式化验证。
 - 阅读过编程语言理论书籍，包括：
@@ -183,6 +195,7 @@
   *Practical Foundations for Programming Languages*;
   *Essentials of Programming Languages*.
 - 熟悉基于约束的类型推断、双向类型推断等，具备丰富的类型系统知识。
+]
 
 *编译器：*
 - 熟练使用和修改常见编译器框架，如LLVM、Cranelift等。
@@ -190,6 +203,16 @@
 - 熟练使用*性能分析*工具（如`perf`、`VTune`、`flamegraph`）进行微架构级性能调优。
 - 熟悉多种*寄存器分配*算法（迭代寄存器合并、线性扫描等）和*垃圾回收*算法（标记-清除、标记-压缩、三色增量、分代回收等）。
 - 深入了解解释器和运行时系统设计与实现，包括各种 threading 技术、栈式 VM 和寄存器式 VM、内存管理、运行时对象表示、*上下文切换*等。
+
+#if for-normal-dev [
+*体系结构：*
+- 设计和实现过*基于计分板机制的乱序 RISC-V 架构 CPU*。
+- 熟悉 x86-64、AArch64、RISC-V 等架构的指令集。
+- 熟练掌握根据 CPU 厂商提供的文档进行微架构级别的性能分析。
+
+*操作系统：*
+- TODO
+]
 
 *语言能力：*
 - 中文（母语），英语（良好的工作沟通能力）
