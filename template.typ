@@ -19,9 +19,10 @@
   content
 ) = {
   set list(indent: 10pt)
+  let tl = text(size: 1.1em, strong(tl))
   block(
     inset: (left: 0pt),
-    strong(tl) + h(1fr) + tr +
+    tl + h(1fr) + tr +
     linebreak() +
     if bl != "" or br != "" {
       bl + h(1fr) + br + linebreak()
@@ -33,7 +34,7 @@
 #let resume(body, lang: "en") = {
   set par(justify: true)
 
-  let font = if lang == "zh-cn" { "PingFang SC" } else { "Charter" }
+  let font = if lang == "zh-cn" { ("Helvetica", "PingFang SC") } else { ("Charter", "Charter") }
 
   let sc(content) = { 
     show regex("[A-Z]+"): it => text(font: font, it)
@@ -53,7 +54,7 @@
     level: 2
   ): it => [
     #set align(left)
-    #set text(size: 12pt, font: font, weight: "regular")
+    #set text(size: 15pt, font: font, weight: "regular")
     #block(sc(it) + sepline())
   ]
   

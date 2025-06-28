@@ -44,10 +44,11 @@ Designing and implementing *optimizations* in compilers for programming language
 == Projects
 
 #entry(
-    tl: [*Calocom* #link("https://github.com/permui/calocom")[#fa-link()] (_Rust_)],
+    tl: [*Calocom* #link("https://github.com/permui/calocom")[#fa-link()]],
     tr: [*Apr. 2022 - June 2022*],
+    bl: [_Group project for course Compilation Principles_],
+    br: [_Rust_]
 )[
-- This is a group project for course _Compilation Principles_.
 - A feature-rich programming language with *algebraic data types*, higher order functions, and pattern matching.
 - I was involved in designing the *type system*, typed AST, the memory representation of objects,
   the style of name mangling, and a middle IR that provides an intermediary level for desugaring and other necessary transformations.
@@ -58,8 +59,10 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*SyOC* #link("https://github.com/waterlens/syoc")[#fa-link()] (_C++, Python, ARM_)],
+    tl: [*SyOC* #link("https://github.com/waterlens/syoc")[#fa-link()]],
     tr: [*Mar. 2022 - Aug. 2022*],
+    bl: [],
+    br: [_C++, Python, ARM_]
 )[
 - A hobby project with my friend for learning compiler optimization techniques and participating in Bisheng Cup Compiler Contest. 
   We wrote the project from scratch and were the first team (2 people) from ZJU to enter the final round of the contest.
@@ -73,10 +76,12 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*QuicKaml* #link("https://github.com/waterlens/quickaml")[#fa-link()] (_C_)],
+    tl: [*QuicKaml* #link("https://github.com/waterlens/quickaml")[#fa-link()]],
     tr: [*June 2023 - Jan. 2024*],
+    bl: [_Personal hobby project_],
+    br: [_C_]
 )[
-- A hobby project that implements a *register-based VM* interpreter of a monomorphic language and engineered many low-level optimizations.
+- Implements a *register-based VM* interpreter of a monomorphic language and engineered many low-level optimizations.
 - I patched LLVM with special *calling conventions* to generate
   efficient code for the handler of VM instructions in interpreter using *guaranteed tail-calls*.
 - I tried multiple techniques to improve the performance of the interpreter, including:
@@ -86,10 +91,11 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*MLscript* #link("https://github.com/waterlens/mlscript")[#fa-link()] (_Scala, C++_)],
+    tl: [*MLscript* #link("https://github.com/waterlens/mlscript")[#fa-link()]],
     tr: [*Apr. 2023 - Now*],
+    bl: [_Joint project from my lab_],
+    br: [_Scala, C++_]
 )[
-- A joint project from my lab.
 - I designed a *ANF*-based intermediate representation with join points extension.
 - I implemented a *smart inliner* with control flow analysis to identify when to make inlining decisions,
   and leverage *function splitting* technique to minimize the code duplication brought by inlining.
@@ -100,10 +106,12 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*MMM* #link("https://github.com/Mini-Moonbit-Machine/mmm")[#fa-link()] (_MoonBit, RISC-V, WebAssembly_)],
-    tr: [*Sept. 2024 - Nov. 2024*]
+    tl: [*MMM* #link("https://github.com/Mini-Moonbit-Machine/mmm")[#fa-link()]],
+    tr: [*Sept. 2024 - Nov. 2024*],
+    bl: [_Team project for MGPIC contest_],
+    br: [_MoonBit, RISC-V, WebAssembly_]
 )[
-- A joint project with my friend for the MGPIC contest. Won 1st place and had an absolute advantage over 2nd place.
+- Won 1st place and had an absolute advantage over 2nd place.
 - I led the development and designed an optimizing compiler
   framework in MoonBit for the _Mini MoonBit_ language with JS, *RISC-V* and *WASM* backends.
 - I implemented all essential optimizations for the contest, including *guaranteed tail recursion elimination*,
@@ -122,38 +130,43 @@ Designing and implementing *optimizations* in compilers for programming language
 ]
 
 #entry(
-    tl: [*RMatch* #link("https://github.com/waterlens/rmatch")[#fa-link()] (_C++_)],
+    tl: [*RMatch* #link("https://github.com/waterlens/rmatch")[#fa-link()]],
     tr: [*Sept. 2021 - Oct. 2021*],
+    bl: [_Personal hobby project_],
+    br: [_C++_]
 )[
-- A personal hobby project that parses *regular expressions* and generates NFA-based *virtual machine* bytecode.
+- Parses *regular expressions* and generates NFA-based *virtual machine* bytecode.
   The bytecode is then *JIT*-compiled to native x86-64 machine instructions with C++ library _xbyak_.
-    
 ]
 
 #entry(
-    tl: [*Apple μArch Bench* #link("https://github.com/waterlens/apple-uarch-bench")[#fa-link()] (_C_)],
+    tl: [*Apple μArch Bench* #link("https://github.com/waterlens/apple-uarch-bench")[#fa-link()]],
     tr: [*Apr. 2024*],
+    bl: [_Hobby project_],
+    br: [_C_]
 )[
-- A hobby project to explore *micro-architecture* characteristics on Apple Silicon with *hardware performance
+- Explores *micro-architecture* characteristics on Apple Silicon with *hardware performance
   counters*.
 ]
 
 #entry(
-    tl: [*SIB Optimization for OCaml* #link("https://github.com/waterlens/ocaml/pull/1")[#fa-link()] (_OCaml_)],
+    tl: [*SIB Optimization for OCaml* #link("https://github.com/waterlens/ocaml/pull/1")[#fa-link()]],
     tr: [*May 2025 - June 2025*],
+    bl: [_*Share-immutable-block* optimization_],
+    br: [_OCaml_]
 )[
-- _Share-immutable-block_ optimization.
-  Functional programming languages frequently perform pattern matching on existing data structures.
+- Functional programming languages frequently perform pattern matching on existing data structures.
   Even if the new object created is identical to the old one, a new object is often allocated.
   I implemented a sound optimization that eliminates this unnecessary allocation if the object is proven to be immutable.
 - This optimization is internally used in the MoonBit compiler.
 ]
 
 #entry(
-    tl: [*Monoid Hash* #link("https://github.com/waterlens/monoid-hash/blob/fcf87700c1145429097045e3a29cc2db8230ae22/crc32c.h#L76")[#fa-link()] (_C, AArch64_)],
+    tl: [*Monoid Hash* #link("https://github.com/waterlens/monoid-hash/blob/fcf87700c1145429097045e3a29cc2db8230ae22/crc32c.h#L76")[#fa-link()]],
     tr: [*Apr. 2025*],
+    bl: [_Performance critical part of an ongoing research project on incremental computation_],
+    br: [_C, AArch64_]
 )[
-- The performance critical part of an ongoing research project on incremental computation.
 - I extended the fast-crc32 implementation with hardware-accelerated monoid
   combination using ARMv8's `pmull` instructions.
   Specifically, this acceleration involves speeding up the multiplication
