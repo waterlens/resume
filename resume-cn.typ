@@ -5,8 +5,9 @@
 #let NORMAL-DEV = "normal-dev"
 #let CPU-COMPILER-PL = "cpu-compiler-pl"
 #let GPU-COMPILER = "gpu-compiler"
+#let GAME-COMPILER = "game-compiler"
 
-#let role = GPU-COMPILER
+#let role = GAME-COMPILER
 
 = 杨汝清
 
@@ -38,10 +39,19 @@
 == 个人兴趣
 
 设计和实现具有新编程范式的高性能并行编程语言，
-在编译器中找寻编译优化的机会，充分利用高性能计算硬件（CPU、GPU、NPU），
+在编译器中找寻编译优化的机会，充分利用计算硬件（CPU、GPU、NPU），
 为用户提供更强的静态安全保障，是我长久以来的追求。
 ]
 
+#let game-side-interest = [
+
+== 个人兴趣
+
+设计和实现具有新编程范式的高性能编程语言，
+在编译器中找寻编译优化的机会，充分利用计算硬件（CPU、GPU、NPU），
+匹配各种真实世界下的应用场景，是我长久以来的追求。
+
+]
 
 
 #if role == NORMAL-DEV {
@@ -50,6 +60,8 @@
   pl-side-interest
 } else if role == GPU-COMPILER {
   gpu-side-interest
+} else if role == GAME-COMPILER {
+  game-side-interest
 }
 
 == 教育背景
@@ -77,7 +89,7 @@
 *编程语言：* 通晓多种编程语言，包括但不限于：
 - 最常用：OCaml、Rust、C/C++、Scala
 - 熟悉：Java、Python、CUDA C/C++
-- 有使用经验：TypeScript、JavaScript、Ruby、Haskell、Lua、Verilog、Scheme等
+- 有使用经验：C\#、TypeScript、JavaScript、Ruby、Haskell、Lua、Verilog、Scheme等
 ]
 
 #let plt-side = [
@@ -117,6 +129,14 @@
 - 掌握常见*进程/线程调度算法*（时间片轮转、多级反馈队列等），理解其对系统性能的影响。
 ]
 
+#let game-side = [
+*游戏引擎：*
+- 丰富的 Unity 引擎开发经验，熟悉 Unity 和 UE 游戏引擎的架构。
+- 深入理解不同编程语言，如 Lua, C\#，TypeScript 等语言在游戏开发中的应用和各自的优缺点。
+- 熟悉 IL2CPP、Mono、LuaJIT、xLua 等常见脚本后端框架在游戏开发中的使用。
+- 掌握常见游戏开发流程、编译系统的构建和执行。
+]
+
 #if role == NORMAL-DEV {
 pl-side
 compiler-side
@@ -131,6 +151,11 @@ arch-side
 pl-side
 arch-side
 compiler-side
+} else if role == GAME-COMPILER {
+pl-side
+compiler-side
+game-side
+os-side
 }
 
 *语言能力：*
