@@ -2,7 +2,11 @@
 
 #show: it => resume(it, lang: "zh-cn")
 
-#let for-normal-dev = true
+#let NORMAL-DEV = "normal-dev"
+#let CPU-COMPILER-PL = "cpu-compiler-pl"
+#let GPU-COMPILER = "gpu-compiler"
+
+#let role = GPU-COMPILER
 
 = 杨汝清
 
@@ -11,18 +15,42 @@
 #iconlink("https://github.com/waterlens", text: "github.com/waterlens", icon: fa-github())
 ]
 
-#if for-normal-dev [
+#let dev-side-interest = [
+  
 == 个人概述
 
 研究过编译器和编译优化，在系统开发与性能优化方面拥有丰富经验，想要致力于高性能软件开发。
 
-] else [
-== 研究兴趣
+]
 
-致力于改进*编程语言*，提升*性能*并为用户提供更强的保障。  
-设计和实现编程语言，对编译器进行*优化*是我毕生的追求。
+#let pl-side-interest = [
+
+== 个人兴趣
+
+设计和实现具有新编程范式的高性能编程语言，
+在编译器中找寻编译优化的机会，
+为用户提供更强的静态安全保障，是我长久以来的追求。
 
 ]
+
+#let gpu-side-interest = [
+
+== 个人兴趣
+
+设计和实现具有新编程范式的高性能并行编程语言，
+在编译器中找寻编译优化的机会，充分利用高性能计算硬件（CPU、GPU、NPU），
+为用户提供更强的静态安全保障，是我长久以来的追求。
+]
+
+
+
+#if role == NORMAL-DEV {
+  dev-side-interest
+} else if role == CPU-COMPILER-PL {
+  pl-side-interest
+} else if role == GPU-COMPILER {
+  gpu-side-interest
+}
 
 == 教育背景
 #entry(
@@ -40,7 +68,73 @@
     bl: [*工学学士 (BEng)*，_计算机科学与技术_，GPA：3.84/4.0],
     br: [_杭州_],
 )[
+  取得 A+/A 成绩的课程：编译原理、计算机体系结构、编程语言原理，操作系统等。
 ]
+
+== 技能
+
+#let pl-side = [
+*编程语言：* 通晓多种编程语言，包括但不限于：
+- 最常用：OCaml、Rust、C/C++、Scala
+- 熟悉：Java、Python、CUDA C/C++
+- 有使用经验：TypeScript、JavaScript、Ruby、Haskell、Lua、Verilog、Scheme等
+]
+
+#let plt-side = [
+*编程语言理论：*
+- 使用Coq进行形式化验证。
+- 阅读过编程语言理论书籍，包括：
+  *Software Foundations*;
+  *Types and Programming Languages*;
+  *Practical Foundations for Programming Languages*;
+  *Essentials of Programming Languages*.
+- 熟悉基于约束的类型推断、双向类型推断等，具备丰富的类型系统知识。
+]
+
+#let compiler-side = [
+*编译器：*
+- 熟练使用和修改常见编译器框架，如*LLVM*、Cranelift等。
+- 精通多种编程语言范式的编译，包括命令式、函数式、面向对象和动态语言。
+- 熟练使用*性能分析*工具（如`perf`、`VTune`、`flamegraph`）进行微架构级性能调优。
+- 熟悉多种*寄存器分配*算法（迭代寄存器合并、线性扫描等）和*垃圾回收*算法（标记-清除、标记-压缩、三色增量、分代回收等）。
+- 深入了解解释器和运行时系统设计与实现，包括各种 threading 技术、栈式 VM 和寄存器式 VM、内存管理、运行时对象表示、*上下文切换*等架构的指令集。
+]
+
+#let arch-side = [
+*体系结构：*
+- 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
+  充分理解 *GPU* 架构和 *CPU* 架构设计上的异同之处与设计取舍。
+- 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。
+- 熟悉 *PTX* 指令集及 *SASS* 等 GPU 架构的指令集。
+- 熟练掌握根据 CPU/GPU 厂商提供的文档进行微架构级别的性能分析。
+]
+
+#let os-side = [
+*操作系统：*
+- 深入理解 Linux 内核的*线程、进程模型*，以及它们的*上下文切换*、*通信*（管道、消息队列、共享内存、信号量）、*同步*（互斥锁、读写锁、条件变量）机制。
+- 熟悉*虚拟内存*机制、分页原理及 MMU 作用。
+- 熟悉 Linux *I/O模型*（阻塞、非阻塞、多路复用epoll、异步），理解其原理及在高并发场景下的应用。
+- 掌握常见*进程/线程调度算法*（时间片轮转、多级反馈队列等），理解其对系统性能的影响。
+]
+
+#if role == NORMAL-DEV {
+pl-side
+compiler-side
+arch-side
+os-side
+} else if role == CPU-COMPILER-PL {
+pl-side
+plt-side
+compiler-side
+arch-side
+} else if role == GPU-COMPILER {
+pl-side
+arch-side
+compiler-side
+}
+
+*语言能力：*
+- 中文（母语），英语（良好的工作沟通能力）
 
 == 项目经历
 
@@ -192,46 +286,5 @@
   - 设计并实现了课程的在线评测系统，利用公共GitHub仓库和免费CI（GitHub Actions）配额。  
     为保护学生代码隐私，要求学生使用公钥加密代码后以GitHub issue形式提交。
 ]
-
-== 技能
-
-*编程语言：* 通晓多种编程语言，包括但不限于：
-- 最常用：OCaml、Rust、C/C++、Scala
-- 熟悉：Java、Python
-- 有使用经验：TypeScript、JavaScript、Ruby、Haskell、Lua、Verilog、Scheme等
-
-#if not(for-normal-dev) [
-*编程语言理论：*
-- 使用Coq进行形式化验证。
-- 阅读过编程语言理论书籍，包括：
-  *Software Foundations*;
-  *Types and Programming Languages*;
-  *Practical Foundations for Programming Languages*;
-  *Essentials of Programming Languages*.
-- 熟悉基于约束的类型推断、双向类型推断等，具备丰富的类型系统知识。
-]
-
-*编译器：*
-- 熟练使用和修改常见编译器框架，如LLVM、Cranelift等。
-- 精通多种编程语言范式的编译，包括命令式、函数式、面向对象和动态语言。
-- 熟练使用*性能分析*工具（如`perf`、`VTune`、`flamegraph`）进行微架构级性能调优。
-- 熟悉多种*寄存器分配*算法（迭代寄存器合并、线性扫描等）和*垃圾回收*算法（标记-清除、标记-压缩、三色增量、分代回收等）。
-- 深入了解解释器和运行时系统设计与实现，包括各种 threading 技术、栈式 VM 和寄存器式 VM、内存管理、运行时对象表示、*上下文切换*等。
-
-#if for-normal-dev [
-*体系结构：*
-- 设计和实现过*基于计分板机制的乱序 RISC-V 架构 CPU*。
-- 熟悉 x86-64、AArch64、RISC-V 等架构的指令集。
-- 熟练掌握根据 CPU 厂商提供的文档进行微架构级别的性能分析。
-
-*操作系统：*
-- 深入理解 Linux 内核的*线程、进程模型*，以及它们的*上下文切换*、*通信*（管道、消息队列、共享内存、信号量）、*同步*（互斥锁、读写锁、条件变量）机制。
-- 熟悉*虚拟内存*机制、分页原理及 MMU 作用。
-- 熟悉 Linux *I/O模型*（阻塞、非阻塞、多路复用epoll、异步），理解其原理及在高并发场景下的应用。
-- 掌握常见*进程/线程调度算法*（时间片轮转、多级反馈队列等），理解其对系统性能的影响。
-]
-
-*语言能力：*
-- 中文（母语），英语（良好的工作沟通能力）
 
 #align(right + bottom, text(fill: gray)[最后更新：2025年6月])
