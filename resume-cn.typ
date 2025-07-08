@@ -6,8 +6,9 @@
 #let CPU-COMPILER-PL = "cpu-compiler-pl"
 #let GPU-COMPILER = "gpu-compiler"
 #let GAME-COMPILER = "game-compiler"
+#let ALL-COMPILER = "all-compiler"
 
-#let role = GAME-COMPILER
+#let role = ALL-COMPILER
 
 = 杨汝清
 
@@ -62,16 +63,18 @@
   gpu-side-interest
 } else if role == GAME-COMPILER {
   game-side-interest
+} else if role == ALL-COMPILER {
+  gpu-side-interest
 }
 
 == 教育背景
 #entry(
     tl: [香港科技大学],
     tr: [*2023年9月 - 2025年11月（预计）*],
-    bl: [*哲学硕士 (MPhil)*，_计算机科学与工程_，导师：Lionel Parreaux],
+    bl: [*哲学硕士，全额奖学金 (MPhil)*，_计算机科学与工程_，导师：Lionel Parreaux],
     br: [_香港特别行政区_],
 )[
-  研究方向：函数式编程语言的*优化*。
+  研究方向：函数式编程语言的*编译优化*。
 ]
 
 #entry(
@@ -114,11 +117,17 @@
 
 #let arch-side = [
 *体系结构：*
+#if role == GPU-COMPILER or role == GAME-COMPILER [
 - 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
   充分理解 *GPU* 架构和 *CPU* 架构设计上的异同之处与设计取舍。
 - 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。
 - 熟悉 *PTX* 指令集及 *SASS* 等 GPU 架构的指令集。
-- 熟练掌握根据 CPU/GPU 厂商提供的文档进行微架构级别的性能分析。
+- 熟练掌握根据 CPU/GPU 厂商提供的文档进行微架构级别的性能分析。 
+] else [
+- 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
+- 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。
+- 熟练掌握根据 CPU/GPU 厂商提供的文档进行微架构级别的性能分析。 
+]
 ]
 
 #let os-side = [
@@ -142,11 +151,11 @@ pl-side
 compiler-side
 arch-side
 os-side
-} else if role == CPU-COMPILER-PL {
+} else if role == CPU-COMPILER-PL or role == ALL-COMPILER {
 pl-side
-plt-side
 compiler-side
 arch-side
+plt-side
 } else if role == GPU-COMPILER {
 pl-side
 arch-side
