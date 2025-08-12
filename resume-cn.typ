@@ -2,19 +2,49 @@
 
 #show: it => resume(it, lang: "zh-cn")
 
+#let desensitization = true
+
 #let NORMAL-DEV = "normal-dev"
 #let CPU-COMPILER-PL = "cpu-compiler-pl"
 #let GPU-COMPILER = "gpu-compiler"
 #let GAME-COMPILER = "game-compiler"
+#let GAME-DEV = "game-dev"
 #let ALL-COMPILER = "all-compiler"
 
 #let role = ALL-COMPILER
 
-= 杨汝清
+#if desensitization [
+  = ⬛⬛⬛
+] else [
+  = 杨汝清
+]
+
+#let email = if desensitization {
+  "waterlens@waterlens.moe"
+} else {
+  "yangrq.lambda@gmail.com"
+}
+
+#let github = "github.com/waterlens"
+
+#let blog = if desensitization {
+  "waterlens.moe/zh/posts"
+} else {
+  "yangrq.org/zh/posts"
+}
+
+#let blog-main = if desensitization {
+  "waterlens.moe"
+} else {
+  "yangrq.org"
+}
 
 #align(center)[
-#iconlink("mailto:yangrq.lambda@gmail.com", text: "yangrq.lambda@gmail.com", icon: fa-envelope())
-#iconlink("https://github.com/waterlens", text: "github.com/waterlens", icon: fa-github())
+#iconlink("mailto:" + email, text: email, icon: fa-envelope())
+#h(.3em)
+#iconlink("https://" + github, text: github, icon: fa-github())
+#h(.3em)
+#iconlink("https://" + blog, text: blog-main, icon: fa-blog())
 ]
 
 #let dev-side-interest = [
@@ -65,6 +95,7 @@
   game-side-interest
 } else if role == ALL-COMPILER {
   gpu-side-interest
+} else if role == GAME-DEV {
 }
 
 == 教育背景
@@ -107,12 +138,14 @@
 ]
 
 #let compiler-side = [
-*编译器与编译优化：*
-- 熟练使用和修改常见编译器框架，如*LLVM*、Cranelift等。
+*编译器：*
+- 熟练使用和修改常见基于 *SSA* 的编译器框架，如*LLVM*、Cranelift等。
 - 精通多种编程语言范式的编译，包括命令式、函数式、面向对象和动态语言。
+- 熟悉*稀疏条件常量传播*、*控制流化简*、*死代码消除*和*不可达代码消除*、*冗余消除*等编译优化。
 - 熟练使用*性能分析*工具（如`perf`、`VTune`、`flamegraph`）进行微架构级性能调优。
 - 熟悉多种*寄存器分配*算法（迭代寄存器合并、线性扫描等）和*垃圾回收*算法（标记-清除、标记-压缩、三色增量、分代回收等）。
 - 深入了解解释器和运行时系统设计与实现，包括各种 threading 技术、栈式 VM 和寄存器式 VM、内存管理、运行时对象表示、*上下文切换*等架构的指令集。
+
 ]
 
 #let arch-side = [
@@ -120,8 +153,7 @@
 #if role == GPU-COMPILER or role == GAME-COMPILER [
 - 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
   充分理解 *GPU* 架构和 *CPU* 架构设计上的异同之处与设计取舍。
-- 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。
-- 熟悉 *PTX* 指令集及 *SASS* 等 GPU 架构的指令集。
+- 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。熟练使用 SSE, AVX, Neon 等 SIMD 指令集。
 - 熟练掌握根据 CPU/GPU 厂商提供的文档进行微架构级别的性能分析。 
 ] else [
 - 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
@@ -189,7 +221,7 @@ arch-side
 #entry(
     tl: [*SyOC* #link("https://github.com/waterlens/syoc")[#fa-link()]],
     tr: [*2022年3月 - 2022年8月*],
-    bl: [],
+    bl: [_团队合作项目_],
     br: [_C++, Python, ARM_]
 )[
 - 旨在学习编译器优化技术并参加毕昇杯编译器大赛。  

@@ -8,7 +8,9 @@
 }
 
 #let iconlink(uri, text: "", icon: fa-link()) = {
-  link(uri)[#icon #text]
+  icon
+  h(.2em)
+  link(uri)[#text]
 }
 
 #let entry(
