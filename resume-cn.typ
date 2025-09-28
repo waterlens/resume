@@ -2,7 +2,7 @@
 
 #show: it => resume(it, lang: "zh-cn")
 
-#let desensitization = true
+#let desensitization = false
 
 #let NORMAL-DEV = "normal-dev"
 #let CPU-COMPILER-PL = "cpu-compiler-pl"
@@ -11,7 +11,7 @@
 #let GAME-DEV = "game-dev"
 #let ALL-COMPILER = "all-compiler"
 
-#let role = ALL-COMPILER
+#let role = NORMAL-DEV
 
 #if desensitization [
   = ⬛⬛⬛
@@ -39,19 +39,25 @@
   "yangrq.org"
 }
 
+#let phone = "13083098668"
+
 #align(center)[
 #iconlink("mailto:" + email, text: email, icon: fa-envelope())
 #h(.3em)
 #iconlink("https://" + github, text: github, icon: fa-github())
 #h(.3em)
 #iconlink("https://" + blog, text: blog-main, icon: fa-blog())
+#h(.3em)
+#if not(desensitization) {
+iconlink("tel:" + phone, text: phone, icon: fa-phone())
+}
 ]
 
 #let dev-side-interest = [
   
 == 个人概述
 
-研究过编译器和编译优化，在系统开发与性能优化方面拥有丰富经验，想要致力于高性能软件开发。
+研究过编译器和编译优化，在系统开发与性能优化方面拥有丰富经验，致力于高性能软件开发。
 
 ]
 
@@ -69,8 +75,9 @@
 
 == 个人概述
 
-设计和实现具有新编程范式的高性能并行编程语言，
-在编译器中找寻编译优化的机会，充分利用计算硬件（CPU、GPU、NPU），
+设计和实现具有新编程范式的高性能并行编程语言、
+在编译器中找寻编译优化的机会、
+充分利用计算硬件（CPU、GPU、NPU）的全部性能、
 为用户提供更强的静态安全保障，是我长久以来的追求。
 ]
 
@@ -116,92 +123,6 @@
 )[
   取得 A+/A 成绩的课程：编译原理、计算机体系结构、编程语言原理，操作系统等。
 ]
-
-== 技能
-
-#let pl-side = [
-*编程语言：* 通晓多种编程语言，包括但不限于：
-- 最常用：OCaml、Rust、C/C++、Scala
-- 熟悉：Java、Python、CUDA C/C++
-- 有使用经验：C\#、TypeScript、JavaScript、Ruby、Haskell、Lua、Verilog、Scheme等
-]
-
-#let plt-side = [
-*编程语言理论：*
-- 使用Coq进行形式化验证。
-- 阅读过编程语言理论书籍，包括：
-  *Software Foundations*;
-  *Types and Programming Languages*;
-  *Practical Foundations for Programming Languages*;
-  *Essentials of Programming Languages*.
-- 熟悉基于约束的类型推断、双向类型推断等，具备丰富的类型系统知识。
-]
-
-#let compiler-side = [
-*编译器：*
-- 熟练使用和修改常见基于 *SSA* 的编译器框架，如*LLVM*、Cranelift等。
-- 精通多种编程语言范式的编译，包括命令式、函数式、面向对象和动态语言。
-- 熟悉*稀疏条件常量传播*、*控制流化简*、*死代码消除*和*不可达代码消除*、*冗余消除*等编译优化。
-- 熟练使用*性能分析*工具（如`perf`、`VTune`、`flamegraph`）进行微架构级性能调优。
-- 熟悉多种*寄存器分配*算法（迭代寄存器合并、线性扫描等）和*垃圾回收*算法（标记-清除、标记-压缩、三色增量、分代回收等）。
-- 深入了解解释器和运行时系统设计与实现，包括各种 threading 技术、栈式 VM 和寄存器式 VM、内存管理、运行时对象表示、*上下文切换*等架构的指令集。
-
-]
-
-#let arch-side = [
-*体系结构：*
-#if role == GPU-COMPILER or role == GAME-COMPILER [
-- 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
-  充分理解 *GPU* 架构和 *CPU* 架构设计上的异同之处与设计取舍。
-- 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。熟练使用 SSE, AVX, Neon 等 SIMD 指令集。
-- 熟练掌握根据 CPU/GPU 厂商提供的文档进行微架构级别的性能分析。 
-] else [
-- 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
-- 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。
-- 熟练掌握根据 CPU/GPU 厂商提供的文档进行微架构级别的性能分析。 
-]
-]
-
-#let os-side = [
-*操作系统：*
-- 深入理解 Linux 内核的*线程、进程模型*，以及它们的*上下文切换*、*通信*（管道、消息队列、共享内存、信号量）、*同步*（互斥锁、读写锁、条件变量）机制。
-- 熟悉*虚拟内存*机制、分页原理及 MMU 作用。
-- 熟悉 Linux *I/O模型*（阻塞、非阻塞、多路复用epoll、异步），理解其原理及在高并发场景下的应用。
-- 掌握常见*进程/线程调度算法*（时间片轮转、多级反馈队列等），理解其对系统性能的影响。
-]
-
-#let game-side = [
-*游戏引擎：*
-- 深入理解 C++、C\#、Lua 等编程语言在游戏引擎开发中的应用，熟悉其内存管理、性能优化及跨平台特性。
-- 熟悉 IL2CPP、Mono、LuaJIT、xLua 等*脚本*后端框架的运行机制，了解其在游戏开发中的编译优化与动态脚本支持。
-- 熟悉游戏开发构建流程与跨平台执行的优化方法。
-
-]
-
-#if role == NORMAL-DEV {
-pl-side
-compiler-side
-arch-side
-os-side
-} else if role == CPU-COMPILER-PL or role == ALL-COMPILER {
-pl-side
-compiler-side
-arch-side
-plt-side
-} else if role == GPU-COMPILER {
-pl-side
-arch-side
-compiler-side
-} else if role == GAME-COMPILER {
-pl-side
-game-side
-compiler-side
-os-side
-arch-side
-}
-
-*语言能力：*
-- 中文（母语），英语（良好的工作沟通能力）
 
 == 项目经历
 
@@ -306,6 +227,92 @@ arch-side
   具体为加速在$"GF"(2^32)$域上两个位反转多项式的乘法运算。
 ]
 
+== 技能
+
+#let pl-side = [
+*编程语言：* 通晓多种编程语言，包括但不限于：
+- 最常用：OCaml、Rust、C/C++、Scala
+- 熟悉：Java、Python、CUDA C/C++
+- 有使用经验：C\#、TypeScript、JavaScript、Ruby、Haskell、Lua、Verilog、Scheme等
+]
+
+#let plt-side = [
+*编程语言理论：*
+- 使用Coq进行形式化验证。
+- 阅读过编程语言理论书籍，包括：
+  *Software Foundations*;
+  *Types and Programming Languages*;
+  *Practical Foundations for Programming Languages*;
+  *Essentials of Programming Languages*.
+- 熟悉基于约束的类型推断、双向类型推断等，具备丰富的类型系统知识。
+]
+
+#let compiler-side = [
+*编译器：*
+- 熟练使用和修改常见基于 *SSA* 的编译器框架，如*LLVM (MLIR)*、Cranelift等。
+- 精通多种编程语言范式的编译，包括命令式、函数式、面向对象和动态语言。
+- 熟悉*稀疏条件常量传播*、*控制流化简*、*死代码消除*和*不可达代码消除*、*冗余消除*等编译优化。
+- 熟练使用*性能分析*工具（如`perf`、`VTune`、`flamegraph`）进行微架构级性能调优。
+- 熟悉多种*寄存器分配*算法（迭代寄存器合并、线性扫描等）和*垃圾回收*算法（标记-清除、标记-压缩、三色增量、分代回收等）。
+- 深入了解解释器和运行时系统设计与实现，包括各种 threading 技术、栈式 VM 和寄存器式 VM、内存管理、运行时对象表示、*上下文切换*等架构的指令集。
+
+]
+
+#let arch-side = [
+*体系结构：*
+#if role == GPU-COMPILER or role == GAME-COMPILER [
+- 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
+  充分理解 *GPU* 架构和 *CPU* 架构设计上的异同之处与设计取舍。
+- 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。熟练使用 SSE, AVX, Neon 等 SIMD 指令集。
+- 熟练掌握根据 CPU 厂商提供的文档进行微架构级别的性能分析。
+] else [
+- 设计和实现过*基于 Tomasulo 算法的乱序 RISC-V 架构 CPU*。
+- 熟悉 x86-64、AArch64、RISC-V 等 CPU 架构的指令集。熟练使用 SSE, AVX, Neon 等 SIMD 指令集。
+- 熟练掌握根据 CPU 厂商提供的文档进行微架构级别的性能分析。 
+]
+]
+
+#let os-side = [
+// *操作系统：*
+// - 深入理解 Linux 内核的*线程、进程模型*，以及它们的*上下文切换*、*通信*（管道、消息队列、共享内存、信号量）、*同步*（互斥锁、读写锁、条件变量）机制。
+// - 熟悉*虚拟内存*机制、分页原理及 MMU 作用。
+// - 熟悉 Linux *I/O模型*（阻塞、非阻塞、多路复用epoll、异步），理解其原理及在高并发场景下的应用。
+// - 掌握常见*进程/线程调度算法*（时间片轮转、多级反馈队列等），理解其对系统性能的影响。
+]
+
+#let game-side = [
+*游戏引擎：*
+- 深入理解 C++、C\#、Lua 等编程语言在游戏引擎开发中的应用，熟悉其内存管理、性能优化及跨平台特性。
+- 熟悉 IL2CPP、Mono、LuaJIT、xLua 等*脚本*后端框架的运行机制，了解其在游戏开发中的编译优化与动态脚本支持。
+- 熟悉游戏开发构建流程与跨平台执行的优化方法。
+
+]
+
+#if role == NORMAL-DEV {
+pl-side
+compiler-side
+arch-side
+os-side
+} else if role == CPU-COMPILER-PL or role == ALL-COMPILER {
+pl-side
+compiler-side
+arch-side
+plt-side
+} else if role == GPU-COMPILER {
+pl-side
+arch-side
+compiler-side
+} else if role == GAME-COMPILER {
+pl-side
+game-side
+compiler-side
+os-side
+arch-side
+}
+
+*语言能力：*
+- 中文（母语），英语（良好的工作沟通能力）
+
 == 学术成果
 
 #entry(
@@ -354,4 +361,4 @@ arch-side
     为保护学生代码隐私，要求学生使用公钥加密代码后以GitHub issue形式提交。
 ]
 
-#align(right + bottom, text(fill: gray)[最后更新：2025年6月])
+#align(right + bottom, text(fill: gray)[最后更新：2025年7月])

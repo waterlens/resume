@@ -13,6 +13,12 @@
   link(uri)[#text]
 }
 
+#let icontext(text: "", icon: fa-link()) = {
+  icon
+  h(.2em)
+  text
+}
+
 #let entry(
   tl: lorem(2),
   tr: "2333/23 - 2333/23",
