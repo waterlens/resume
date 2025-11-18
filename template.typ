@@ -2,7 +2,7 @@
 #import "@preview/based:0.2.0": base64
 
 #let sepline() = {
-  v(-10pt);
+  v(-8pt);
   line(length: 100%);
   v(-2pt)
 }
@@ -26,8 +26,8 @@
   br: "",
   content
 ) = {
-  set list(indent: 10pt)
-  let tl = text(size: 1.1em, strong(tl))
+  set list(indent: 8pt)
+  let tl = text(strong(tl))
   block(
     inset: (left: 0pt),
     tl + h(1fr) + tr +
@@ -70,19 +70,19 @@
 
   show link: it => underline(offset: 2pt, it)
   set page(
-    height: auto,
-    margin: (x: 0.9cm, y: 1.3cm),
+    margin: (x: 0.9cm, y: 0.9cm),
   )
   set par(justify: true)
 
   let ts = datetime.today(offset:8).display()
   let embedded = bytes(base64.encode(ts))
   
-  pdf.embed(
+  pdf.attach(
     "info.txt",
     embedded,
     mime-type: "text/plain",
-    relationship: "data",
+    relationship: "supplement",
+    description: "Extra metadata for the resume",
   )
 
   body
