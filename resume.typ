@@ -123,9 +123,18 @@ I am passionate about solving the challenges of ultra-low latency and high-throu
 == Publications
 
 #entry(
+    tl: [*Incremental Live Programming via Shortcut Memoization*, _OOPSLA 2026_],
+    tr: [*Dec. 2024 — May 2026*],
+)[Marisa Kirisame, Thomas J. Porter, *Ruqing Yang*, Jianqiu Zhao, Yudi Wu, Ivan Wei, Cyrus Omar, Pavel Panchekha
+
+  Proposes an incremental live programming approach based on shortcut memoization that learns repeated computation patterns to accelerate re-execution.]
+
+#entry(
     tl: [*Smart Inlining through Function Splitting*, _PLDI SRC 2025_],
-    tr: [*Apr. 2025*],
-)[]
+    tr: [*Mar. 2025 — Jun. 2025*],
+)[*Ruqing Yang*
+
+  Proposes a compiler optimization using function splitting for smart inlining, reducing code bloat while preserving optimization benefits.]
 
 == Experience
 

@@ -142,9 +142,18 @@ iconlink("tel:" + phone, text: phone, icon: fa-phone())
 == 学术成果
 
 #entry(
+    tl: [*Incremental Live Programming via Shortcut Memoization*，_OOPSLA 2026_],
+    tr: [*2024年12月 — 2026年5月*],
+)[Marisa Kirisame, Thomas J. Porter, *Ruqing Yang*, Jianqiu Zhao, Yudi Wu, Ivan Wei, Cyrus Omar, Pavel Panchekha
+
+  提出一种基于快捷记忆化的增量式实时编程方法，通过学习程序重复计算模式加速重执行。]
+
+#entry(
     tl: [*Smart Inlining through Function Splitting*，_PLDI SRC 2025_],
-    tr: [*2025年4月*],
-)[]
+    tr: [*2025年3月 — 2025年6月*],
+)[*Ruqing Yang*
+
+  提出一种基于函数拆分的智能内联编译器优化方法，在保证优化效果的同时减少代码膨胀。]
 
 == 实习经历
 
